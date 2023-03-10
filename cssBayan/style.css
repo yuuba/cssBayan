@@ -1,0 +1,48 @@
+.m1image {
+    background-image: url(./image/m1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.m2image {
+    background-image: url(./image/m2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.m3image {
+    background-image: url(./image/m3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.m4image {
+    background-image: url(./image/m4.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.m5image {
+    background-image: url(./image/m5.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+input {
+    visibility: hidden;
+}
+
+.meme input:checked~label {
+    color: blue;
+    height: 500px;
+}
+
+.meme input:checked~div {
+    color: blue;
+    height: 300px;
+}
+
+.meme input:hover~div {
+    color: blue;
+    height: 300px;
+}
