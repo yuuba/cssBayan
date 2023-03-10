@@ -1,48 +1,108 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.container:hover label::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .m1image {
     background-image: url(./image/m1.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+
 }
 
 .m2image {
     background-image: url(./image/m2.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+
 }
 
 .m3image {
     background-image: url(./image/m3.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+
 }
 
 .m4image {
     background-image: url(./image/m4.gif);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+
 }
+
+
 
 .m5image {
     background-image: url(./image/m5.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+
+}
+
+.meme {
+    height: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.meme>div {
+    height: 300px;
 }
 
 input {
     visibility: hidden;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+input:checked {
+    transition: all 1s ease;
 }
 
 .meme input:checked~label {
     color: blue;
-    height: 500px;
+    /* transform: translateY(-50%); */
 }
 
-.meme input:checked~div {
-    color: blue;
+.meme:has(>input:checked) {
+    transition: all 1s ease;
     height: 300px;
 }
 
-.meme input:hover~div {
+.meme:hover {
     color: blue;
+    transition: all 1s ease;
     height: 300px;
+}
+
+.meme>div {
+    margin: 10px 50px;
+}
+
+input:checked+label::after {
+    /* content: "X"; */
+    transform: rotate(-45deg);
+    transition: all 1s ease;
 }
