@@ -109,10 +109,13 @@ input:checked {
     height: 60vh;
 }
 
-.meme>div {
-    /* margin: 15px 50px; */
-    /* padding-bottom: 10px; */
+.meme>div:active {
+    filter: grayscale(70%);
 }
+
+/* .meme:active>* {
+    color: blue;
+} */
 
 input:checked+label::after {
     /* content: "X"; */
