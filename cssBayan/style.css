@@ -1,8 +1,7 @@
 h1 {
-    text-align: center;
+    text-align: left;
     color: black;
 }
-
 
 .container {
     width: 40%;
@@ -17,11 +16,18 @@ h1 {
     color: black;
 }
 
+.container:hover .plus {
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
 .img {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     height: 100%;
+    visibility: hidden;
+
 }
 
 .m1image {
@@ -46,14 +52,14 @@ h1 {
 
 /* /////////////////////////////////////////// */
 .meme {
-    height: 1.5rem;
-    position: relative;
+    height: 2.5rem;
     overflow: hidden;
     transition: all 0.5s ease;
     border-top: 0.1rem solid #bdb1b1;
     padding: 0.2rem 0;
     display: flex;
     justify-content: space-between;
+    transition: all 0.5s ease;
 
 }
 
@@ -66,27 +72,30 @@ input {
 label {
     cursor: pointer;
     width: 100%;
-
 }
 
 input:checked {
     transition: all 0.5s ease;
 }
 
+input:checked~label>div {
+    visibility: visible;
+
+}
+
 .plus {
     height: 1.3em;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
+    visibility: hidden;
 }
 
 .meme input:checked~label {
     color: black;
-
 }
 
 .meme input:checked~div {
     color: black;
     transform: rotate(-45deg);
-
 }
 
 .meme:has(>input:checked) {
@@ -96,13 +105,20 @@ input:checked {
 
 .meme:hover {
     color: black;
-    transition: all 0.5s ease;
     height: 60vh;
+    transition: all 0.5s ease;
+
 
 }
 
 .meme:hover>.plus {
     transform: rotate(-45deg);
+    transition: all 0.5s ease;
+
+}
+
+.meme:hover>label>div {
+    visibility: visible;
     transition: all 0.5s ease;
 }
 
@@ -111,29 +127,24 @@ label:active {
     color: blue;
 }
 
-
-
-/* input:checked+label::after {
-    transform: rotate(-45deg);
-    transition: all 0.5s ease;
-} */
-
 input:checked~label {
     height: 100%;
+    transition: all 0.5s ease;
 }
 
 .meme:hover>label {
     height: 100%;
+    transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 1920px) {
     .container {
         width: 50%;
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
     .meme {
-        height: 1.2rem;
+        height: 2rem;
 
     }
 }
@@ -144,12 +155,12 @@ input:checked~label {
         margin: 0 auto;
         cursor: pointer;
         color: blue;
-        font-size: 14px;
+        font-size: 1em;
         font-weight: bold;
     }
 
     .meme {
-        height: 2rem;
+        min-height: 1.2rem;
 
     }
 }
