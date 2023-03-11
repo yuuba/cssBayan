@@ -1,8 +1,8 @@
 h1 {
     text-align: center;
     color: black;
-
 }
+
 
 .container {
     width: 40%;
@@ -17,118 +17,113 @@ h1 {
     color: black;
 }
 
-.container:hover label::after {
-    content: "+";
-    position: absolute;
-    top: 0;
-    right: 0;
+.img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
 }
 
 .m1image {
     background-image: url(./image/m1.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
 }
 
 .m2image {
     background-image: url(./image/m2.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
 }
 
 .m3image {
     background-image: url(./image/m3.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
 }
 
 .m4image {
     background-image: url(./image/m4.gif);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
 }
-
-
 
 .m5image {
     background-image: url(./image/m5.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
 }
 
+/* /////////////////////////////////////////// */
 .meme {
     height: 1.5rem;
     position: relative;
     overflow: hidden;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     border-top: 0.1rem solid #bdb1b1;
     padding: 0.2rem 0;
-}
+    display: flex;
+    justify-content: space-between;
 
-
-.meme>div {
-    height: 0;
 }
 
 input {
     visibility: hidden;
     cursor: pointer;
+    width: 0;
 }
 
 label {
     cursor: pointer;
+    width: 100%;
+
 }
 
 input:checked {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
+}
+
+.plus {
+    height: 1.3em;
+    transition: all 0.5s ease;
 }
 
 .meme input:checked~label {
     color: black;
-    /* transform: translateY(-50%); */
+
+}
+
+.meme input:checked~div {
+    color: black;
+    transform: rotate(-45deg);
+
 }
 
 .meme:has(>input:checked) {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     height: 60vh;
 }
 
 .meme:hover {
     color: black;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     height: 60vh;
+
 }
 
-.meme>div:active {
+.meme:hover>.plus {
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+}
+
+label:active {
     filter: grayscale(70%);
+    color: blue;
 }
 
-/* .meme:active>* {
-    color: blue;
+
+
+/* input:checked+label::after {
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
 } */
 
-input:checked+label::after {
-    /* content: "X"; */
-    transform: rotate(-45deg);
-    transition: all 1s ease;
+input:checked~label {
+    height: 100%;
 }
 
-input:checked~div {
-    height: 85%;
-}
-
-.meme:hover>div {
-    height: 85%;
+.meme:hover>label {
+    height: 100%;
 }
 
 @media screen and (max-width: 1920px) {
