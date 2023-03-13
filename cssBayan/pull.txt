@@ -1,0 +1,6 @@
+1. Task: CSS Bayan
+2. Screenshot:
+3. Deploy: cssBayan
+4. Done 12.03.2023 / deadline 13.03.2023
+5. Score: 110 / 140
+--- Everything is done from Repository requirements and how to submit task section -30
